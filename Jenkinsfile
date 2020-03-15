@@ -46,9 +46,6 @@ node {
 	}
 	*/
 	stage('Build'){
-		steps{
-			echo 'building......'	
-		}
 		post{
 			always{
 				jiraSendBuildInfo site: 'devopsilp.atlassian.net'	
