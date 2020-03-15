@@ -28,6 +28,7 @@ node {
         server.publishBuildInfo buildInfo
     }
 	*/
+	/*
 	stage('development - jira')
 	{
 		when {
@@ -40,6 +41,17 @@ node {
 			always{
 				jiraSendDeploymentInfo environmentId: 'coronahd', environmentName: 'coronahd', environmentType: 'development', site: 'devopsilp.atlassian.net'    
 			}	
+		}
+	}
+	*/
+	stage('Build'){
+		steps{
+			echo 'building......'	
+		}
+		post{
+			always{
+				jiraSendBuildInfo branch: 'master', site: 'devopsilp.atlassian.net'	
+			}
 		}
 	}
 }
