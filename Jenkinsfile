@@ -1,5 +1,6 @@
 
 node {
+	/*
     // Get Artifactory server instance, defined in the Artifactory Plugin administration page.
     def server = Artifactory.server "spdevops"
     // Create an Artifactory Maven instance.
@@ -7,7 +8,7 @@ node {
     def buildInfo
     
  rtMaven.tool = "maven"
-	
+	*/
     /*stage('Clone sources') {
         git url: 'https://github.com/briantcsdevops/WebApp.git'
     }
