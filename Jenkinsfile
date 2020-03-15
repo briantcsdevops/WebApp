@@ -7,8 +7,8 @@ node {
     def buildInfo
     
  rtMaven.tool = "maven"
-
-    stage('Clone sources') {
+	
+    /*stage('Clone sources') {
         git url: 'https://github.com/briantcsdevops/WebApp.git'
     }
 
@@ -27,5 +27,20 @@ node {
     stage('Publish build info') {
         server.publishBuildInfo buildInfo
     }
-    }
+	*/
+	stage('development - jira')
+	{
+		when {
+			branch 'master'
+		}
+		steps{
+			echo 'Deploying to dev from jira'	
+		}
+		post{
+			always{
+				jiraSendDeploymentInfo environmentId: '', environmentName: '', environmentType: 'development', site: 'devopsilp.atlassian.net'    
+			}	
+		}
+	}
+}
 	 
