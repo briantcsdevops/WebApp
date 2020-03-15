@@ -31,8 +31,8 @@ node {
     */
 
 	stage('Build'){
-		build 'jiraTest'
-		jiraSendBuildInfo branch: 'master', site: 'devopsilp.atlassian.net'	
+		//build 'jiraTest'
+		jiraSendBuildInfo branch: 'ABC-123', site: 'devopsilp.atlassian.net'	
 	}
 }
 	 
