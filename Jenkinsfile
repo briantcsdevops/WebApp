@@ -28,9 +28,11 @@ node {
     stage('Publish build info') {
         server.publishBuildInfo buildInfo
     }
-	stage('development - jira')
-	{
-				jiraSendDeploymentInfo environmentId: 'coronahd', environmentName: 'coronahd', environmentType: 'development', site: 'devopsilp.atlassian.net'
+    */
+
+	stage('Build'){
+		build 'jiraTest'
+		jiraSendBuildInfo branch: 'master', site: 'devopsilp.atlassian.net'	
 	}
 }
 	 
