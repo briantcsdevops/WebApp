@@ -50,7 +50,7 @@ node {
 		}
 		post{
 			always{
-				jiraSendBuildInfo branch: 'master', site: 'devopsilp.atlassian.net'	
+				jiraSendBuildInfo site: 'devopsilp.atlassian.net'	
 			}
 		}
 	}
