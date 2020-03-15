@@ -28,25 +28,9 @@ node {
     stage('Publish build info') {
         server.publishBuildInfo buildInfo
     }
-	*/
-	/*
 	stage('development - jira')
 	{
-		when {
-			branch 'master'
-		}
-		steps{
-			echo 'Deploying to dev from jira'	
-		}
-		post{
-			always{
-				jiraSendDeploymentInfo environmentId: 'coronahd', environmentName: 'coronahd', environmentType: 'development', site: 'devopsilp.atlassian.net'    
-			}	
-		}
-	}
-	*/
-	stage('Build'){
-				jiraSendBuildInfo branch: 'master', site: 'devopsilp.atlassian.net'	
+				jiraSendDeploymentInfo environmentId: 'coronahd', environmentName: 'coronahd', environmentType: 'development', site: 'devopsilp.atlassian.net'
 	}
 }
 	 
