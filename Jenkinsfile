@@ -46,7 +46,7 @@ node {
 	}
 	*/
 	stage('Build'){
-				jiraSendBuildInfo site: 'devopsilp.atlassian.net'	
+				jiraSendBuildInfo branch: 'master', site: 'devopsilp.atlassian.net'	
 	}
 }
 	 
