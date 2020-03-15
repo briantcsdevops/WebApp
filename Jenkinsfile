@@ -38,7 +38,7 @@ node {
 		}
 		post{
 			always{
-				jiraSendDeploymentInfo environmentId: '', environmentName: '', environmentType: 'development', site: 'devopsilp.atlassian.net'    
+				jiraSendDeploymentInfo environmentId: 'coronahd', environmentName: 'coronahd', environmentType: 'development', site: 'devopsilp.atlassian.net'    
 			}	
 		}
 	}
